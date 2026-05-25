@@ -260,44 +260,74 @@ export default function Index() {
       </header>
 
       {/* HERO */}
-      <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-16">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-15"
-          style={{ backgroundImage: `url(https://cdn.poehali.dev/projects/c2ab5e88-4f4a-404f-91fc-fd09399670c8/files/5599114f-34fd-45ab-a0f7-c2a63c51b3a6.jpg)` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
+      <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Video background */}
+        <div className="absolute inset-0 z-0">
+          <iframe
+            src="https://www.youtube.com/embed/0_MhpAMl5yg?autoplay=1&mute=1&loop=1&playlist=0_MhpAMl5yg&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
+            className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2 pointer-events-none"
+            allow="autoplay; encrypted-media"
+            title="background"
+          />
+        </div>
 
-        <div className="container mx-auto px-6 relative z-10 pb-32">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-accent mb-6 animate-fade-up" style={{ animationDelay: "0.1s", opacity: 0 }}>
-              <span className="w-8 h-px bg-accent" />
+        {/* Dark cinematic overlay */}
+        <div className="absolute inset-0 z-10 video-overlay" />
+        {/* Bottom gradient to merge with next section */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 z-10 bg-gradient-to-t from-background to-transparent" />
+        {/* Subtle orange glow left */}
+        <div className="absolute top-1/3 -left-32 w-96 h-96 rounded-full z-10 pointer-events-none" style={{ background: "radial-gradient(circle, hsl(24 100% 52% / 0.12) 0%, transparent 70%)" }} />
+
+        <div className="container mx-auto px-6 relative z-20 pt-24 pb-40">
+          <div className="max-w-3xl">
+            <div
+              className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-widest text-accent mb-8 animate-fade-up"
+              style={{ animationDelay: "0.1s", opacity: 0 }}
+            >
+              <span className="w-10 h-px bg-accent" />
               Производство металлической складской тары
             </div>
-            <h1 className="text-5xl md:text-7xl font-black leading-[1.05] tracking-tight mb-6 animate-fade-up" style={{ animationDelay: "0.2s", opacity: 0 }}>
-              Тележки.
-              <br />Фреймы.
-              <br /><span className="text-accent">Возвратная тара.</span>
+            <h1
+              className="text-6xl md:text-8xl font-black leading-[0.95] tracking-tight mb-8 animate-fade-up"
+              style={{ animationDelay: "0.2s", opacity: 0 }}
+            >
+              Тележки.<br />
+              Фреймы.<br />
+              <span className="text-accent text-glow">Возвратная тара.</span>
             </h1>
-            <p className="text-lg text-muted-foreground mb-10 max-w-lg leading-relaxed animate-fade-up" style={{ animationDelay: "0.35s", opacity: 0 }}>
-              Изготавливаем металлическую складскую тару по чертежам и ТЗ. Серийное производство от 10 до 10 000 единиц. Срок — от 14 дней.
+            <p
+              className="text-lg text-foreground/70 mb-10 max-w-xl leading-relaxed animate-fade-up"
+              style={{ animationDelay: "0.35s", opacity: 0 }}
+            >
+              Изготавливаем металлическую складскую тару по чертежам и ТЗ.<br />
+              Серийное производство от 10 до 10 000 единиц. Срок — от 14 дней.
             </p>
-            <div className="flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: "0.5s", opacity: 0 }}>
-              <a href="#upload" className="inline-flex items-center gap-2 px-8 py-3.5 bg-accent text-accent-foreground font-semibold rounded-sm hover:opacity-90 transition-opacity text-sm">
+            <div
+              className="flex flex-wrap gap-4 animate-fade-up"
+              style={{ animationDelay: "0.5s", opacity: 0 }}
+            >
+              <a
+                href="#upload"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground font-bold rounded-sm hover:opacity-90 transition-opacity text-sm glow-accent"
+              >
                 <Icon name="FileText" size={16} />
                 Получить расчёт
               </a>
-              <a href="#services" className="inline-flex items-center gap-2 px-8 py-3.5 border border-border text-foreground font-medium rounded-sm hover:border-foreground transition-colors text-sm">
-                Вся продукция
+              <a
+                href="#catalog"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-foreground/30 text-foreground font-medium rounded-sm hover:border-accent hover:text-accent transition-colors text-sm backdrop-blur-sm"
+              >
+                Смотреть каталог
                 <Icon name="ArrowRight" size={16} />
               </a>
             </div>
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="absolute bottom-0 left-0 right-0 border-t border-border bg-background/80 backdrop-blur-sm">
+        {/* Stats bar */}
+        <div className="absolute bottom-0 left-0 right-0 z-20 border-t border-border/50 bg-background/60 backdrop-blur-md">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border">
+            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border/50">
               {STATS.map((s) => (
                 <div key={s.label} className="py-5 px-6 text-center">
                   <div className="text-2xl font-black text-accent">{s.value}</div>
@@ -310,7 +340,7 @@ export default function Index() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-24 bg-secondary/30">
+      <section id="about" className="py-24 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
@@ -375,10 +405,10 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {SERVICES.map((s) => (
-              <div key={s.title} className="bg-background p-8 group hover:bg-secondary/40 transition-colors">
-                <div className="w-10 h-10 flex items-center justify-center bg-secondary rounded-sm mb-5 group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+              <div key={s.title} className="bg-card border border-border p-8 group card-hover rounded-sm">
+                <div className="w-11 h-11 flex items-center justify-center bg-secondary rounded-sm mb-5 group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
                   <Icon name={s.icon as "Settings"} size={20} />
                 </div>
                 <h3 className="font-bold text-base mb-2">{s.title}</h3>
@@ -390,7 +420,7 @@ export default function Index() {
       </section>
 
       {/* CATALOG */}
-      <section id="catalog" className="py-24 bg-secondary/30">
+      <section id="catalog" className="py-24 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
             <div>
@@ -422,7 +452,7 @@ export default function Index() {
           {/* Cards grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {filteredCatalog.map((item) => (
-              <div key={item.id} className="bg-background border border-border rounded-sm overflow-hidden group hover:shadow-md transition-shadow flex flex-col">
+              <div key={item.id} className="bg-card border border-border rounded-sm overflow-hidden group card-hover flex flex-col">
                 <div className="overflow-hidden aspect-[4/3]">
                   <img
                     src={item.img}
@@ -579,7 +609,7 @@ export default function Index() {
               </div>
             )}
 
-            <div className="bg-background border border-border rounded-sm p-6 space-y-4">
+            <div className="bg-card border border-border rounded-sm p-6 space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-medium mb-1.5">Ваше имя</label>
@@ -588,7 +618,7 @@ export default function Index() {
                     placeholder="Иван Петров"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full px-3 py-2.5 text-sm border border-border rounded-sm bg-background focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-3 py-2.5 text-sm border border-border rounded-sm bg-secondary focus:outline-none focus:border-accent transition-colors"
                   />
                 </div>
                 <div>
@@ -598,7 +628,7 @@ export default function Index() {
                     placeholder="+7 (999) 000-00-00"
                     value={form.phone}
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    className="w-full px-3 py-2.5 text-sm border border-border rounded-sm bg-background focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-3 py-2.5 text-sm border border-border rounded-sm bg-secondary focus:outline-none focus:border-accent transition-colors"
                   />
                 </div>
               </div>
@@ -609,7 +639,7 @@ export default function Index() {
                   placeholder="Тип тары, количество, размеры, материал, срок, особые требования..."
                   value={form.comment}
                   onChange={(e) => setForm({ ...form, comment: e.target.value })}
-                  className="w-full px-3 py-2.5 text-sm border border-border rounded-sm bg-background focus:outline-none focus:border-accent transition-colors resize-none"
+                  className="w-full px-3 py-2.5 text-sm border border-border rounded-sm bg-secondary focus:outline-none focus:border-accent transition-colors resize-none"
                 />
               </div>
               <button className="w-full py-3 bg-accent text-accent-foreground font-semibold text-sm rounded-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
@@ -639,7 +669,7 @@ export default function Index() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {PORTFOLIO.map((p) => (
-              <div key={p.title} className="group overflow-hidden rounded-sm border border-border bg-background hover:shadow-lg transition-shadow">
+              <div key={p.title} className="group overflow-hidden rounded-sm border border-border bg-card card-hover">
                 <div className="overflow-hidden aspect-[4/3]">
                   <img
                     src={p.img}
@@ -661,13 +691,13 @@ export default function Index() {
       </section>
 
       {/* CONTACTS */}
-      <section id="contacts" className="py-24 bg-foreground text-primary-foreground">
+      <section id="contacts" className="py-24 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
               <div className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">Свяжитесь с нами</div>
               <h2 className="text-4xl md:text-5xl font-black leading-tight mb-8">Контакты</h2>
-              <div className="space-y-6">
+              <div className="space-y-5">
                 {[
                   { icon: "Phone", label: "Телефон", value: "+7 (800) 000-00-00" },
                   { icon: "Mail", label: "Email", value: "info@mdmgrupp.ru" },
@@ -675,26 +705,26 @@ export default function Index() {
                   { icon: "Clock", label: "Режим работы", value: "Пн–Пт 9:00–18:00" },
                 ].map((c) => (
                   <div key={c.label} className="flex items-start gap-4">
-                    <div className="w-9 h-9 flex items-center justify-center bg-primary-foreground/10 rounded-sm flex-shrink-0">
+                    <div className="w-10 h-10 flex items-center justify-center bg-accent/10 border border-accent/20 rounded-sm flex-shrink-0">
                       <Icon name={c.icon as "Phone"} size={17} className="text-accent" />
                     </div>
                     <div>
-                      <div className="text-xs text-primary-foreground/50 mb-0.5">{c.label}</div>
-                      <div className="text-sm font-medium">{c.value}</div>
+                      <div className="text-xs text-muted-foreground mb-0.5">{c.label}</div>
+                      <div className="text-sm font-semibold">{c.value}</div>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-10 p-5 border border-primary-foreground/10 rounded-sm bg-primary-foreground/5">
-                <p className="text-sm font-semibold mb-1">Нужна консультация?</p>
-                <p className="text-xs text-primary-foreground/60">
+              <div className="mt-10 p-5 border border-accent/20 rounded-sm bg-accent/5">
+                <p className="text-sm font-semibold mb-1 text-accent">Нужна консультация?</p>
+                <p className="text-xs text-muted-foreground">
                   Наши технологи помогут подобрать оптимальную конструкцию тары под ваши задачи — бесплатно.
                 </p>
               </div>
             </div>
 
-            <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-sm p-8">
+            <div className="bg-card border border-border rounded-sm p-8">
               <h3 className="font-bold text-lg mb-6">Написать нам</h3>
               <div className="space-y-4">
                 <input
@@ -702,23 +732,23 @@ export default function Index() {
                   placeholder="Ваше имя и компания"
                   value={contactForm.name}
                   onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                  className="w-full px-4 py-3 text-sm bg-primary-foreground/5 border border-primary-foreground/10 rounded-sm text-primary-foreground placeholder:text-primary-foreground/30 focus:outline-none focus:border-accent transition-colors"
+                  className="w-full px-4 py-3 text-sm bg-secondary border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition-colors"
                 />
                 <input
                   type="email"
                   placeholder="Email"
                   value={contactForm.email}
                   onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-                  className="w-full px-4 py-3 text-sm bg-primary-foreground/5 border border-primary-foreground/10 rounded-sm text-primary-foreground placeholder:text-primary-foreground/30 focus:outline-none focus:border-accent transition-colors"
+                  className="w-full px-4 py-3 text-sm bg-secondary border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition-colors"
                 />
                 <textarea
                   rows={4}
                   placeholder="Опишите вашу задачу или вопрос..."
                   value={contactForm.message}
                   onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
-                  className="w-full px-4 py-3 text-sm bg-primary-foreground/5 border border-primary-foreground/10 rounded-sm text-primary-foreground placeholder:text-primary-foreground/30 focus:outline-none focus:border-accent transition-colors resize-none"
+                  className="w-full px-4 py-3 text-sm bg-secondary border border-border rounded-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition-colors resize-none"
                 />
-                <button className="w-full py-3 bg-accent text-accent-foreground font-semibold text-sm rounded-sm hover:opacity-90 transition-opacity">
+                <button className="w-full py-3 bg-accent text-accent-foreground font-bold text-sm rounded-sm hover:opacity-90 transition-opacity glow-accent">
                   Отправить сообщение
                 </button>
               </div>
@@ -728,18 +758,18 @@ export default function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-foreground text-primary-foreground border-t border-primary-foreground/10">
+      <footer className="bg-card border-t border-border">
         <div className="container mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 font-bold">
             <span className="w-2 h-5 bg-accent inline-block rounded-sm" />
             МДМ Групп
           </div>
-          <p className="text-xs text-primary-foreground/40">
+          <p className="text-xs text-muted-foreground">
             © 2025 МДМ Групп. Производство металлической складской тары.
           </p>
           <div className="flex gap-6">
             {NAV_LINKS.map((l) => (
-              <a key={l.href} href={l.href} className="text-xs text-primary-foreground/40 hover:text-primary-foreground/80 transition-colors">
+              <a key={l.href} href={l.href} className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                 {l.label}
               </a>
             ))}
