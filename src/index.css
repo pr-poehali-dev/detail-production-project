@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 220 15% 10%;
+    --background: 30 8% 97%;
+    --foreground: 20 12% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 15% 10%;
+    --card: 30 5% 100%;
+    --card-foreground: 20 12% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 10%;
+    --popover: 30 5% 100%;
+    --popover-foreground: 20 12% 12%;
 
-    --primary: 220 15% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 20 12% 12%;
+    --primary-foreground: 30 8% 97%;
 
-    --secondary: 220 10% 94%;
-    --secondary-foreground: 220 15% 10%;
+    --secondary: 25 10% 92%;
+    --secondary-foreground: 20 12% 12%;
 
-    --muted: 220 10% 94%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 25 10% 92%;
+    --muted-foreground: 20 8% 48%;
 
-    --accent: 210 60% 40%;
+    --accent: 24 95% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 30 8% 97%;
 
-    --border: 220 10% 88%;
-    --input: 220 10% 88%;
-    --ring: 220 15% 10%;
+    --border: 25 10% 86%;
+    --input: 25 10% 86%;
+    --ring: 24 95% 50%;
 
     --radius: 0.25rem;
 
@@ -113,6 +113,6 @@
   .upload-zone:hover,
   .upload-zone.drag-over {
     border-color: hsl(var(--accent));
-    background-color: hsl(210 60% 40% / 0.04);
+    background-color: hsl(24 95% 50% / 0.04);
   }
 }
