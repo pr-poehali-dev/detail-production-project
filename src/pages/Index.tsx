@@ -103,7 +103,7 @@ export default function Index() {
         <div className="container mx-auto flex items-center justify-between h-16 px-6">
           <a href="#hero" className="flex items-center gap-2 font-bold text-xl tracking-tight">
             <span className="w-2 h-6 bg-accent inline-block rounded-sm" />
-            ТочМет
+            МДМ Групп
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -521,10 +521,10 @@ export default function Index() {
         <div className="container mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 font-bold">
             <span className="w-2 h-5 bg-accent inline-block rounded-sm" />
-            ТочМет
+            МДМ Групп
           </div>
           <p className="text-xs text-primary-foreground/40">
-            © 2024 ТочМет. Изготовление деталей по чертежам.
+            © 2025 МДМ Групп. Изготовление деталей по чертежам.
           </p>
           <div className="flex gap-6">
             {NAV_LINKS.map((l) => (
