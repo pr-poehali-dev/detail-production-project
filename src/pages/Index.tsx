@@ -5,6 +5,7 @@ const NAV_LINKS = [
   { label: "Главная", href: "#hero" },
   { label: "О нас", href: "#about" },
   { label: "Продукция", href: "#services" },
+  { label: "Каталог", href: "#catalog" },
   { label: "Портфолио", href: "#portfolio" },
   { label: "Контакты", href: "#contacts" },
 ];
@@ -63,6 +64,118 @@ const PORTFOLIO = [
   },
 ];
 
+const CATALOG = [
+  {
+    id: "PT-600",
+    category: "Платформенные тележки",
+    title: "Тележка платформенная ТП-600",
+    dims: "1200 × 800 × 900 мм",
+    load: "600 кг",
+    material: "Сталь 3сп",
+    coating: "Порошковое покрытие",
+    img: "https://cdn.poehali.dev/projects/c2ab5e88-4f4a-404f-91fc-fd09399670c8/files/1f9b95c1-36d2-4646-bfea-5a85a42d3490.jpg",
+  },
+  {
+    id: "PT-1000",
+    category: "Платформенные тележки",
+    title: "Тележка платформенная ТП-1000",
+    dims: "1400 × 900 × 900 мм",
+    load: "1000 кг",
+    material: "Сталь 3сп",
+    coating: "Горячий цинк",
+    img: "https://cdn.poehali.dev/projects/c2ab5e88-4f4a-404f-91fc-fd09399670c8/files/1f9b95c1-36d2-4646-bfea-5a85a42d3490.jpg",
+  },
+  {
+    id: "RT-G",
+    category: "Рамные тележки",
+    title: "Тележка рамная Г-образная ТР-Г",
+    dims: "1000 × 600 × 1400 мм",
+    load: "500 кг",
+    material: "Профильная труба 60×40",
+    coating: "Порошковое покрытие",
+    img: "https://cdn.poehali.dev/projects/c2ab5e88-4f4a-404f-91fc-fd09399670c8/files/8579b419-8902-444c-8bdc-5f8e18089b9a.jpg",
+  },
+  {
+    id: "RT-N",
+    category: "Рамные тележки",
+    title: "Тележка рамная Н-образная ТР-Н",
+    dims: "1200 × 800 × 1600 мм",
+    load: "800 кг",
+    material: "Профильная труба 80×40",
+    coating: "Горячий цинк",
+    img: "https://cdn.poehali.dev/projects/c2ab5e88-4f4a-404f-91fc-fd09399670c8/files/8579b419-8902-444c-8bdc-5f8e18089b9a.jpg",
+  },
+  {
+    id: "SC-800",
+    category: "Сетчатые контейнеры",
+    title: "Контейнер сетчатый складной КС-800",
+    dims: "800 × 600 × 700 мм",
+    load: "500 кг",
+    material: "Проволока 6 мм",
+    coating: "Горячий цинк",
+    img: "https://cdn.poehali.dev/projects/c2ab5e88-4f4a-404f-91fc-fd09399670c8/files/4cc877c5-667a-4ccd-8bfb-3a02091cdb4d.jpg",
+  },
+  {
+    id: "SC-1200",
+    category: "Сетчатые контейнеры",
+    title: "Контейнер сетчатый сварной КС-1200",
+    dims: "1200 × 800 × 900 мм",
+    load: "800 кг",
+    material: "Проволока 8 мм",
+    coating: "Горячий цинк",
+    img: "https://cdn.poehali.dev/projects/c2ab5e88-4f4a-404f-91fc-fd09399670c8/files/4cc877c5-667a-4ccd-8bfb-3a02091cdb4d.jpg",
+  },
+  {
+    id: "MB-600",
+    category: "Металлические ящики",
+    title: "Ящик металлический ЯМ-600",
+    dims: "600 × 400 × 400 мм",
+    load: "300 кг",
+    material: "Лист 2 мм, сталь",
+    coating: "Порошковое покрытие",
+    img: "https://cdn.poehali.dev/projects/c2ab5e88-4f4a-404f-91fc-fd09399670c8/files/f2c6734f-9c40-46a9-98da-60778b15f12f.jpg",
+  },
+  {
+    id: "MB-1200",
+    category: "Металлические ящики",
+    title: "Ящик металлический ЯМ-1200",
+    dims: "1200 × 800 × 600 мм",
+    load: "600 кг",
+    material: "Лист 3 мм, сталь",
+    coating: "Грунт + эмаль",
+    img: "https://cdn.poehali.dev/projects/c2ab5e88-4f4a-404f-91fc-fd09399670c8/files/f2c6734f-9c40-46a9-98da-60778b15f12f.jpg",
+  },
+  {
+    id: "SF-1200",
+    category: "Штабелируемые фреймы",
+    title: "Фрейм штабелируемый ФШ-1200",
+    dims: "1200 × 800 × 200 мм",
+    load: "2000 кг",
+    material: "Профильная труба 60×60",
+    coating: "Горячий цинк",
+    img: "https://cdn.poehali.dev/projects/c2ab5e88-4f4a-404f-91fc-fd09399670c8/files/458fc48c-7773-451b-b8ea-10165163b851.jpg",
+  },
+  {
+    id: "SF-1600",
+    category: "Штабелируемые фреймы",
+    title: "Фрейм штабелируемый ФШ-1600",
+    dims: "1600 × 1200 × 200 мм",
+    load: "3000 кг",
+    material: "Профильная труба 80×80",
+    coating: "Горячий цинк",
+    img: "https://cdn.poehali.dev/projects/c2ab5e88-4f4a-404f-91fc-fd09399670c8/files/458fc48c-7773-451b-b8ea-10165163b851.jpg",
+  },
+];
+
+const CATALOG_CATEGORIES = [
+  "Все позиции",
+  "Платформенные тележки",
+  "Рамные тележки",
+  "Сетчатые контейнеры",
+  "Металлические ящики",
+  "Штабелируемые фреймы",
+];
+
 const STATS = [
   { value: "12+", label: "лет на рынке" },
   { value: "200+", label: "клиентов по России" },
@@ -82,7 +195,13 @@ export default function Index() {
   const [uploadedFiles, setUploadedFiles] = useState<string[]>([]);
   const [form, setForm] = useState({ name: "", phone: "", comment: "" });
   const [contactForm, setContactForm] = useState({ name: "", email: "", message: "" });
+  const [activeCategory, setActiveCategory] = useState("Все позиции");
+  const [priceRequest, setPriceRequest] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const filteredCatalog = activeCategory === "Все позиции"
+    ? CATALOG
+    : CATALOG.filter((item) => item.category === activeCategory);
 
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
@@ -270,8 +389,138 @@ export default function Index() {
         </div>
       </section>
 
+      {/* CATALOG */}
+      <section id="catalog" className="py-24 bg-secondary/30">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">Стандартные позиции</div>
+              <h2 className="text-4xl md:text-5xl font-black leading-tight">Каталог</h2>
+            </div>
+            <p className="text-muted-foreground max-w-xs text-sm leading-relaxed">
+              Готовые конструкции со стандартными размерами — в наличии и под заказ
+            </p>
+          </div>
+
+          {/* Filter tabs */}
+          <div className="flex flex-wrap gap-2 mb-10">
+            {CATALOG_CATEGORIES.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-4 py-2 text-sm font-medium rounded-sm border transition-colors ${
+                  activeCategory === cat
+                    ? "bg-accent text-accent-foreground border-accent"
+                    : "border-border text-muted-foreground hover:border-foreground hover:text-foreground bg-background"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          {/* Cards grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            {filteredCatalog.map((item) => (
+              <div key={item.id} className="bg-background border border-border rounded-sm overflow-hidden group hover:shadow-md transition-shadow flex flex-col">
+                <div className="overflow-hidden aspect-[4/3]">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <div className="mb-3">
+                    <span className="text-xs font-medium text-accent bg-accent/10 px-2 py-0.5 rounded-sm">
+                      {item.id}
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-sm mb-3 leading-snug">{item.title}</h3>
+                  <div className="space-y-1.5 mb-4 flex-1">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-muted-foreground">Габариты</span>
+                      <span className="font-medium">{item.dims}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-muted-foreground">Нагрузка</span>
+                      <span className="font-medium text-accent">{item.load}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-muted-foreground">Материал</span>
+                      <span className="font-medium">{item.material}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-muted-foreground">Покрытие</span>
+                      <span className="font-medium">{item.coating}</span>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => setPriceRequest(item.id)}
+                    className="w-full py-2.5 text-xs font-semibold border border-accent text-accent rounded-sm hover:bg-accent hover:text-accent-foreground transition-colors"
+                  >
+                    Узнать цену
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PRICE REQUEST MODAL */}
+      {priceRequest && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/60 backdrop-blur-sm px-4"
+          onClick={() => setPriceRequest(null)}
+        >
+          <div
+            className="bg-background border border-border rounded-sm p-8 w-full max-w-md animate-fade-in"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h3 className="font-bold text-lg">Запрос цены</h3>
+                <p className="text-xs text-muted-foreground mt-0.5">Артикул: <span className="text-accent font-mono font-semibold">{priceRequest}</span></p>
+              </div>
+              <button onClick={() => setPriceRequest(null)} className="text-muted-foreground hover:text-foreground">
+                <Icon name="X" size={20} />
+              </button>
+            </div>
+            <div className="space-y-3">
+              <input
+                type="text"
+                placeholder="Ваше имя"
+                className="w-full px-3 py-2.5 text-sm border border-border rounded-sm bg-background focus:outline-none focus:border-accent transition-colors"
+              />
+              <input
+                type="tel"
+                placeholder="Телефон или Email"
+                className="w-full px-3 py-2.5 text-sm border border-border rounded-sm bg-background focus:outline-none focus:border-accent transition-colors"
+              />
+              <input
+                type="number"
+                placeholder="Количество, шт."
+                className="w-full px-3 py-2.5 text-sm border border-border rounded-sm bg-background focus:outline-none focus:border-accent transition-colors"
+              />
+              <textarea
+                rows={2}
+                placeholder="Дополнительные пожелания..."
+                className="w-full px-3 py-2.5 text-sm border border-border rounded-sm bg-background focus:outline-none focus:border-accent transition-colors resize-none"
+              />
+              <button
+                onClick={() => setPriceRequest(null)}
+                className="w-full py-3 bg-accent text-accent-foreground font-semibold text-sm rounded-sm hover:opacity-90 transition-opacity"
+              >
+                Отправить запрос
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* UPLOAD / QUOTE */}
-      <section id="upload" className="py-24 bg-secondary/30">
+      <section id="upload" className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-10">
